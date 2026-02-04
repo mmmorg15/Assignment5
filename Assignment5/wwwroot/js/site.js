@@ -15,4 +15,4 @@
         let total = hours * rate;
         $("#total").val("$" + total.toFixed(2));
     });
-});
+})
