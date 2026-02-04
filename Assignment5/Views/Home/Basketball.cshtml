@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Basketball";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Simple Calulator to calculate price!</p>
+
+@* // J query form to complete the calculation
+// A box for the user to enter the number of hourse they need from you
+// Validation to make sure they actually entered a positve number
+// An non-editable box that shows how much you charge per hour
+// A button that allows the user to calculate the total
+// An output box that shows the total *@
+@* Navigation back to the home page *@
+
+<div class="calculator-card">
+    <div class="mb-3">
+        <label for="hours" class="form-label">Hours needed</label>
+        <input id="hours" type="number" class="form-control" placeholder="e.g., 2" min="0" step="0.5" />
+        <div id="hoursError" class="text-danger mt-1"></div>
+    </div>
+
+    <div class="mb-3">
+        <label for="rate" class="form-label">Rate per hour</label>
+        <input id="rate" type="text" class="form-control" value="25" readonly />
+    </div>
+
+    <button id="calcBtn" class="btn btn-primary">Calculate Total</button>
+
+    <div class="mb-3 mt-3">
+        <label for="total" class="form-label">Total</label>
+        <input id="total" type="text" class="form-control" readonly />
+    </div>
+</div>
+<a asp-controller="Home" asp-action="Index">← Back to Home</a>
+
+@section Scripts {
+    <!-- jQuery (CDN) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Your JS file -->
+    <script src="~/js/site.js"></script>
+}

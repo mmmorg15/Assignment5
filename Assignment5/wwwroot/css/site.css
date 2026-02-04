@@ -1,0 +1,133 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.img-row {
+    display: flex;
+    gap: 5vw; /* change this */
+    align-items: center;
+}
+
+/* --- Calculator page container --- */
+.calculator-card {
+    max-width: 520px;
+    margin: 40px auto;
+    padding: 24px;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Title */
+.calculator-title {
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    margin-bottom: 18px;
+}
+
+/* Basketball orange theme */
+:root {
+    --bb-orange: #f57c00; /* basketball orange */
+    --bb-orange-dark: #e56f00;
+    --bb-black: #1f1f1f;
+    --bb-gray: #6b7280;
+}
+
+/* Labels */
+.calculator-card label {
+    font-weight: 700;
+    color: var(--bb-black);
+    margin-bottom: 6px;
+}
+
+/* Inputs */
+.calculator-card input.form-control {
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.15);
+    padding: 10px 12px;
+}
+
+    .calculator-card input.form-control:focus {
+        border-color: var(--bb-orange);
+        box-shadow: 0 0 0 0.2rem rgba(245, 124, 0, 0.25);
+    }
+
+/* Readonly inputs (rate + total) */
+.calculator-card input[readonly] {
+    background: #fff7ee;
+    border-color: rgba(245, 124, 0, 0.35);
+    font-weight: 700;
+}
+
+/* Primary button override (Bootstrap-ish) */
+.calculator-card .btn-primary {
+    background: var(--bb-orange);
+    border-color: var(--bb-orange);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+}
+
+    .calculator-card .btn-primary:hover {
+        background: var(--bb-orange-dark);
+        border-color: var(--bb-orange-dark);
+        transform: translateY(-1px);
+    }
+
+    .calculator-card .btn-primary:active {
+        transform: translateY(0);
+    }
+
+/* Error text */
+#hoursError {
+    font-weight: 700;
+}
+
+/* Back link */
+.calculator-card a {
+    color: var(--bb-orange);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+    .calculator-card a:hover {
+        text-decoration: underline;
+    }
+
+/* Optional: a subtle basketball "stitch" accent line */
+.bb-stitch {
+    height: 8px;
+    margin: 10px 0 18px;
+    border-radius: 999px;
+    background: repeating-linear-gradient( 90deg, rgba(245,124,0,0.95) 0, rgba(245,124,0,0.95) 10px, rgba(0,0,0,0.25) 10px, rgba(0,0,0,0.25) 14px );
+}
