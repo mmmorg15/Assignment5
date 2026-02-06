@@ -1,18 +1,12 @@
 ﻿@{
     ViewData["Title"] = "Basketball";
 }
-<h1>@ViewData["Title"]</h1>
+<h1 class="display-4">@ViewData["Title"]</h1>
+@*// second view with calcualtor*@
 
 <p>Simple Calulator to calculate price!</p>
 
-@* // J query form to complete the calculation
-// A box for the user to enter the number of hourse they need from you
-// Validation to make sure they actually entered a positve number
-// An non-editable box that shows how much you charge per hour
-// A button that allows the user to calculate the total
-// An output box that shows the total *@
-@* Navigation back to the home page *@
-
+@*Form for my calculator*@
 <div class="calculator-card">
     <div class="mb-3">
         <label for="hours" class="form-label">Hours needed</label>
@@ -32,12 +26,6 @@
         <input id="total" type="text" class="form-control" readonly />
     </div>
 </div>
+
+@*Navigate back to the home page. *@
 <a asp-controller="Home" asp-action="Index">← Back to Home</a>
-
-@section Scripts {
-    <!-- jQuery (CDN) -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-    <!-- Your JS file -->
-    <script src="~/js/site.js"></script>
-}
